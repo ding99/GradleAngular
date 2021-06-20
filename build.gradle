@@ -1,0 +1,4 @@
+allprojects{
+    group = 'combine.first'
+    version = '0.0.1-SNAPSHOT'
+}

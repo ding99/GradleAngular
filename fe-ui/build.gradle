@@ -1,0 +1,16 @@
+plugins{
+  id 'java'
+  id("com.github.node-gradle.node") version "3.0.1"
+}
+
+node {
+  version = '14.16.0'
+  npmVersion = '7.5.2'
+  download = true
+}
+
+jar.dependsOn 'npm_run_build'
+
+jar {
+  from 'dist/fe-ui' into 'static'
+}
